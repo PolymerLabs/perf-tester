@@ -302,7 +302,7 @@
           baseline = this._calcScores(times);
         }
       }
-      let min = 1e6, max = 0;
+      let min = 0, max = 0;
       let info = `<br>Runs: ${this._count}/${this.runs}<br><br>`;
       for (let i=0; i<data.length; i++) {
         let {url, times, testInfo} = data[i];
@@ -325,7 +325,6 @@
           <span style="font-size: 8px; white-space: nowrap">`;
         //
         for (let j=0, v; (v=times[j]); j++) {
-          min = Math.min(v, min);
           max = Math.max(v, max);
           let o = stats.outlier(v);
           info += (o ? '<o>' : '<n>') + v.toFixed(0) + (o ? '</o>' : '</n>') + '|';
