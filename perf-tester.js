@@ -322,7 +322,7 @@
           <b>${timeReport}</b>
           &nbsp;&nbsp;<a href="${this.base}${url}" target="_blank">${title}</a>
           <br>
-          <span style="font-size: 8px; white-space: nowrap">`;
+          <span style="font-size: 8px;white-space: nowrap;overflow-x: auto;display: block;">`;
         //
         for (let j=0, v; (v=times[j]); j++) {
           max = Math.max(v, max);
