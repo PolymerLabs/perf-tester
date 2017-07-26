@@ -324,7 +324,7 @@
           <br>
           <span style="font-size: 8px; white-space: nowrap">`;
         //
-        for (let j=0, v; (v=times[j]); j++) {
+        for (let j=0, v; (v=times[j]) !== undefined; j++) {
           max = Math.max(v, max);
           let o = stats.outlier(v);
           info += (o ? '<o>' : '<n>') + v.toFixed(0) + (o ? '</o>' : '</n>') + '|';
