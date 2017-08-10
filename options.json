@@ -1,0 +1,4 @@
+[
+    ["original", "http://localhost:8081/youtube/"],
+    ["effects", "http://localhost:8081/youtube/index-effects.html"]
+]
