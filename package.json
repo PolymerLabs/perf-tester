@@ -1,0 +1,19 @@
+{
+  "name": "perf-tester",
+  "version": "0.1.0",
+  "description": "An element to help performance test other elements.",
+  "main": "perf-tester.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PolymerLabs/perf-tester.git"
+  },
+  "author": "",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/PolymerLabs/perf-tester/issues"
+  },
+  "homepage": "https://github.com/PolymerLabs/perf-tester#readme"
+}
