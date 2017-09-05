@@ -35,19 +35,18 @@ const NUMBER_OF_RUNS = argv.runs || 100;
       downloadThroughput: .5 * ONE_MB * .8,
       uploadThroughput: .5 * ONE_MB * .8
     }
-  }
+  };
 
-                     await Promise.all([
-                       Page.enable(),
-                       Network.enable(),
-                       port && argv.throttling &&
-                           Network.emulateNetworkConditions(Object.assign(
-                               {}, throttling[argv.throttling],
-                               {offline: false, latency: 10})),
-                       Network.clearBrowserCache(),
-                       Network.setCacheDisabled({cacheDisabled: true}),
-                       Network.setBypassServiceWorker({bypass: true}),
-                     ]);
+  await Promise.all([
+    Page.enable(),
+    Network.enable(),
+    port && argv.throttling &&
+        Network.emulateNetworkConditions(Object.assign(
+            {}, throttling[argv.throttling], {offline: false, latency: 10})),
+    Network.clearBrowserCache(),
+    Network.setCacheDisabled({cacheDisabled: true}),
+    Network.setBypassServiceWorker({bypass: true}),
+  ]);
 
   let loadEventPromise;
 
