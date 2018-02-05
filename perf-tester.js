@@ -282,6 +282,9 @@
 
     _scoreMessage(e) {
       if (this.afterScore) {
+        if (!e.data) {
+          return;
+        }
         let info = e.data;
         if (typeof info !== 'object') {
           info = {time: info};
