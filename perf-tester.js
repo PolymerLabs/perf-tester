@@ -282,7 +282,7 @@
 
     _scoreMessage(e) {
       if (this.afterScore) {
-        if (!e.data) {
+        if (!e.data || !e.data.time) {
           return;
         }
         let info = e.data;
