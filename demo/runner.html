@@ -26,14 +26,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <summary>Perf is go.</summary>
   <perf-tester></perf-tester>
 
-  <script>
-  addEventListener('WebComponentsReady', function() {
+  <script type="module">
     document.querySelector('perf-tester').tests = [
       'a.html',
       'input.html'
     ];
-
-  });
   </script>
 
 </body>
